@@ -1,0 +1,13 @@
+language: java
+branches:
+  only:
+  - develop
+  - "/^release-[0-999].[0-999]$/"
+  - master
+notifications:
+  email:
+    recipients:
+    - j.bernal@upm.es
+script:
+- mvn install
+
