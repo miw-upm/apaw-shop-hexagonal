@@ -2,6 +2,9 @@
 ## Arquitectura y Patrones para Aplicaciones Web (APAW). Arquitectura Hexagonal
 > Este proyecto es un apoyo docente de la asignatura y un ejemplo práctico del desarrollo de una aplicación Web siguiendo una Arquitectura por capas
 
+### Estado del código
+[![Build Status](https://travis-ci.org/miw-upm/apaw-shop-hexagonal.svg?branch=develop)](https://travis-ci.org/miw-upm/apaw-shop-hexagonal)
+
 ### Tecnologías necesarias
 `Java` `Maven` `GitHub` `Spring-boot` 
 
