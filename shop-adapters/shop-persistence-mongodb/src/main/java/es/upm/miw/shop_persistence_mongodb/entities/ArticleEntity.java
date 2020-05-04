@@ -1,5 +1,7 @@
 package es.upm.miw.shop_persistence_mongodb.entities;
 
+import es.upm.miw.shop_domain.models.Article;
+import org.springframework.beans.BeanUtils;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,6 +21,10 @@ public class ArticleEntity {
     private String provider;
 
     public ArticleEntity() {
+    }
+
+    public ArticleEntity(Article article) {
+        this.update(article);
     }
 
     public String getId() {
@@ -61,12 +67,22 @@ public class ArticleEntity {
         this.provider = provider;
     }
 
+    public void update(Article article) {
+        BeanUtils.copyProperties(article, this);
+    }
+
+    public Article toArticle() {
+        Article article = new Article();
+        BeanUtils.copyProperties(this, article);
+        return article;
+    }
+
     @Override
     public int hashCode() {
         return barcode.hashCode();
     }
 
-    //@Override
+    @Override
     public boolean equals(Object obj) {
         return this == obj || obj != null && getClass() == obj.getClass() && (barcode.equals(((ArticleEntity) obj).barcode));
     }

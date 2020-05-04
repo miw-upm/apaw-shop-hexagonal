@@ -1,7 +1,10 @@
 package es.upm.miw.shop_domain.ports;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.stream.Stream;
 
+@Repository
 public interface GenericPersistence<T, ID> {
     Stream<T> readAll();
 

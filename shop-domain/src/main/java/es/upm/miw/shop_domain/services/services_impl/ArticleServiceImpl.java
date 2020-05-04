@@ -1,7 +1,9 @@
 package es.upm.miw.shop_domain.services.services_impl;
 
 import es.upm.miw.shop_domain.models.Article;
+import es.upm.miw.shop_domain.ports.ArticlePersistence;
 import es.upm.miw.shop_domain.services.ArticleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -10,25 +12,17 @@ import java.util.stream.Stream;
 @Service("articleService")
 public class ArticleServiceImpl implements ArticleService {
 
-/*    private ArticlePersistence articlePersistence;
+    private ArticlePersistence articlePersistence;
 
+    @Autowired
     public ArticleServiceImpl(ArticlePersistence articlePersistence) {
         this.articlePersistence = articlePersistence;
-    }
-*/
-
-    public ArticleServiceImpl() {
-        System.out.println("===--->>> ArticleServiceImpl: ");
+        System.out.println("===--->>> ArticleServiceImpl: " + this.articlePersistence);
     }
 
     @Override
     public Stream<Article> readAll() {
-        //return this.articlePersistence.readAll();
-        return Stream.of(
-                new Article(840002L, "art mock2", BigDecimal.ONE, "prov mock2"),
-                new Article(840003L, "art mock3", BigDecimal.ONE, "prov mock3"),
-                new Article(840004L, "art mock4", BigDecimal.ONE, "prov mock4")
-        );
+        return this.articlePersistence.readAll();
     }
 
     @Override

@@ -1,7 +1,7 @@
 package es.upm.miw.apaw_shop_hexagonal.shop_application;
 
 import es.upm.miw.shop_domain.services.ArticleService;
-import es.upm.miw.shop_persistence_mongodb.entities.ArticleEntity;
+import es.upm.miw.shop_persistence_mongodb.adapters.ArticlePersistenceImpl;
 import es.upm.miw.shop_persistence_mongodb.repositories.ArticleRepository;
 import es.upm.miw.shop_rest_web.resources.ArticleResource;
 import org.springframework.boot.SpringApplication;
@@ -12,9 +12,9 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication(
         scanBasePackageClasses = {
                 DatabaseSeeder.class,
-                ArticleService.class,
-                ArticleEntity.class,
                 ArticleResource.class,
+                ArticleService.class,
+                ArticlePersistenceImpl.class,
                 ArticleRepository.class
         },
         exclude = {ErrorMvcAutoConfiguration.class}
