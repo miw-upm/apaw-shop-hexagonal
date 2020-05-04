@@ -1,4 +1,4 @@
-package es.upm.miw.apaw_shop_hexagonal.shop_application;
+package es.upm.miw.shop_application;
 
 import es.upm.miw.shop_domain.services.ArticleService;
 import es.upm.miw.shop_persistence_mongodb.adapters.ArticlePersistenceImpl;

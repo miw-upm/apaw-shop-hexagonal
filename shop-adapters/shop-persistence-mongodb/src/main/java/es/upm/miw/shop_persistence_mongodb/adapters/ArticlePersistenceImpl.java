@@ -19,7 +19,6 @@ public class ArticlePersistenceImpl implements ArticlePersistence {
     @Autowired
     public ArticlePersistenceImpl(ArticleRepository articleRepository) {
         this.articleRepository = articleRepository;
-        System.out.println("===--->>> ArticlePersistenceImpl: " + this.articleRepository);
     }
 
     @Override

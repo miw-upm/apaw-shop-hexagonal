@@ -13,14 +13,13 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(ArticleResource.ARTICLES)
 public class ArticleResource {
-    static final String ARTICLES = "/articles";
+    public static final String ARTICLES = "/articles";
 
     private ArticleService articleService;
 
     @Autowired
     public ArticleResource(ArticleService articleService) {
         this.articleService = articleService;
-        System.out.println("===--->>> ArticleResource: " + this.articleService);
     }
 
     @GetMapping

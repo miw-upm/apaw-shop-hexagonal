@@ -17,7 +17,6 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     public ArticleServiceImpl(ArticlePersistence articlePersistence) {
         this.articlePersistence = articlePersistence;
-        System.out.println("===--->>> ArticleServiceImpl: " + this.articlePersistence);
     }
 
     @Override

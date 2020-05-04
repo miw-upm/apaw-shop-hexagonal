@@ -1,4 +1,4 @@
-package es.upm.miw.apaw_shop_hexagonal.shop_application;
+package es.upm.miw.shop_application;
 
 import es.upm.miw.shop_domain.models.Article;
 import es.upm.miw.shop_persistence_mongodb.entities.ArticleEntity;
@@ -28,6 +28,5 @@ public class DatabaseSeeder {
                 new ArticleEntity(new Article(840004L, "art mock4", BigDecimal.ONE, "prov mock4"))
         );
         this.articleRepository.saveAll(articles);
-        System.out.println("===--->>> seedDatabase: readAll:" + this.articleRepository.findAll());
     }
 }

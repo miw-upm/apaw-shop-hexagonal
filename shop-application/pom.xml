@@ -30,6 +30,12 @@
             <artifactId>shop-domain</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!-- Asynchronous programming -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
