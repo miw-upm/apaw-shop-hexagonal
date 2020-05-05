@@ -5,7 +5,6 @@ import es.upm.miw.shop_persistence_mongodb.entities.ArticleEntity;
 import es.upm.miw.shop_persistence_mongodb.repositories.ArticleRepository;
 import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -33,7 +32,7 @@ public class ShopSeederService {
                 new ArticleEntity(new Article(84005L, "art 005", new BigDecimal("0.45"), "prov 5")),
         };
         this.articleRepository.saveAll(Arrays.asList(articles));
-     }
+    }
 
     public void deleteAll() {
         this.articleRepository.deleteAll();
