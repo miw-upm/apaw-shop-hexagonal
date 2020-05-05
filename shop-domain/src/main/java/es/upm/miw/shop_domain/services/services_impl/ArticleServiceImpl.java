@@ -6,7 +6,6 @@ import es.upm.miw.shop_domain.services.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.util.stream.Stream;
 
 @Service("articleService")
@@ -26,7 +25,6 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Article readById(String id) {
-        return new Article(840001L, "art mock", BigDecimal.ONE, "prov mock");
-        //return this.articlePersistence.readById(id);
+        return this.articlePersistence.readById(id);
     }
 }
