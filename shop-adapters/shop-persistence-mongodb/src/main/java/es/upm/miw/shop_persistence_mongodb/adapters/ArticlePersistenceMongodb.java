@@ -6,18 +6,14 @@ import es.upm.miw.shop_domain.models.Article;
 import es.upm.miw.shop_domain.ports.ArticlePersistence;
 import es.upm.miw.shop_persistence_mongodb.entities.ArticleEntity;
 import es.upm.miw.shop_persistence_mongodb.repositories.ArticleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import java.util.stream.Stream;
 
-@Repository("articlePersistence")
-public class ArticlePersistenceImpl implements ArticlePersistence {
+public class ArticlePersistenceMongodb implements ArticlePersistence {
 
     private ArticleRepository articleRepository;
 
-    @Autowired
-    public ArticlePersistenceImpl(ArticleRepository articleRepository) {
+    public ArticlePersistenceMongodb(ArticleRepository articleRepository) {
         this.articleRepository = articleRepository;
     }
 

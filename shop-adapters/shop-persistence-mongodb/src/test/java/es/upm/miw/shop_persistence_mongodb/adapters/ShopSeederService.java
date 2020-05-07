@@ -4,19 +4,14 @@ import es.upm.miw.shop_domain.models.Article;
 import es.upm.miw.shop_persistence_mongodb.entities.ArticleEntity;
 import es.upm.miw.shop_persistence_mongodb.repositories.ArticleRepository;
 import org.apache.logging.log4j.LogManager;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-@Service
 public class ShopSeederService {
 
     private ArticleRepository articleRepository;
 
-
-    @Autowired
     public ShopSeederService(ArticleRepository articleRepository) {
         this.articleRepository = articleRepository;
         this.seedDatabase();

@@ -2,7 +2,6 @@ package es.upm.miw.shop_persistence_mongodb.adapters;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -18,7 +17,7 @@ import java.lang.annotation.Target;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @TestPropertySource(locations = "classpath:test.properties")
-@ActiveProfiles("dev")
+//@ActiveProfiles("dev")
 @ContextConfiguration(classes = {ShopPersistenceMongodbConfig.class})
 public @interface TestConfig {
 }
